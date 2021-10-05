@@ -1,0 +1,35 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border-bottom: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    color: gray;
+  }
+
+  .delElem, .edit{
+    background: none;
+    border: 0;
+    padding: 0;
+  }
+
+  .delElem{
+    color: red;
+    margin-right: 2px;
+  }
+
+  .edit:hover, .delElem:hover{
+    cursor: pointer;
+  }
+
+  .hello{
+    background: none;
+    border: 0;
+    color: gray;
+  }
+
+ 
