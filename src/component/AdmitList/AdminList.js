@@ -33,7 +33,7 @@ export default class AdminList extends Component {
             return (
                 <>
                     <tr>
-                        <td><input name="check" type="checkbox" onChange={(e) => {
+                        <td><input id={`${String.fromCharCode(parseInt(element.id)+96)}`} name="check" type="checkbox" onChange={(e) => {
                             this.props.clicked(e);
                         }}></input></td>
                         <td>{element.name}</td>

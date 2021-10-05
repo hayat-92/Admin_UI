@@ -10,13 +10,14 @@ export default class MyUI extends Component {
 
         this.debounceTimeout = 0;
         this.checker = [];
-        this.isBox = false;
+        this.isBox=false;
         this.state = {
             filtered_data: [],
             pageID: "0-10",
             btnNum: 5,
             data: [],
             isChecked: false,
+            isBox:false,
         }
     }
 
@@ -84,7 +85,6 @@ export default class MyUI extends Component {
 
     deleteFxn = () => {
         let filt = this.AllData.filter((elem) => {
-
             if (this.isBox) {
                 for (let x of this.state.filtered_data) {
                     if (elem.id === x.id) {
@@ -94,7 +94,9 @@ export default class MyUI extends Component {
                 return true;
             } else {
                 for (let x of this.checker) {
+
                     if (elem.id === x) {
+
                         return false;
                     }
                 }
@@ -120,7 +122,9 @@ export default class MyUI extends Component {
 
     clicker = (e) => {
         if (e.target.checked) {
-            this.checker.push(e.target.id);
+            let ex=(e.target.id).charCodeAt(0)-96;
+            this.checker.push(""+ex);
+
         }
 
     }
